@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <style>
+        #thumb{
+
+        position:absolute;
+        border:1px solid #b7e5ff;
+        background:#ccc;
+        padding:5px;
+        display:none;
+        color:#333;
+        }
+    </style>
+</head>
+
+<body>
+   <!-- //<a href="img/1.jpg" class="thumb" title="Nombre imagen" target="_blank">Nombre imagen</a>-->
+    <img width='50px' class="thumb" src='img/1.jpg' alt='' />
+    <img width='50px' class="thumb" src='img/2.jpg' alt='' />
+<script>
+    this.thumbPreview=function(){
+        xOffset=10
+        yOffset=30
+        $(".thumb").mouseover(function(t){
+            $("body").append("<p id='thumb'><img width='500x' src='"+this.src+"' alt='' /></p>")
+            $("#thumb").css("top",t.pageY-xOffset+"px").css("left",t.pageX+yOffset+"px").show()
+        })
+        $(".thumb").mouseout(function(t){
+            $("p#thumb").remove()
+        })
+    }
+    $(document).ready(function(){
+        thumbPreview()
+    });
+</script>
+</body>
+</html>
