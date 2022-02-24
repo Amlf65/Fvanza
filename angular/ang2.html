@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hola mundo con angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        angular.module("MyFirstApp",[])
+        .controller("FirstController",function($scope){
+            $scope.nombre="Adolfo"
+        })
+    </script>
+</head>
+
+<body ng-controller="FirstController">
+    <input type="text" ng-model="nombre">
+    {{"Hola " + nombre }}
+</body>
+
+</html>

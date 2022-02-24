@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax-JQ-usuario</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="plantillajs.css">
+    <style>
+        input,
+        p {
+            font-size: 1.2em;
+        }
+
+        #botones {
+            padding: 30px;
+
+        }
+
+        #respuesta {
+            font-size: 2.0em;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th,
+        td {
+            width: 25%;
+            text-align: center;
+
+        }
+
+        section {
+            font-size: 2.0em;
+            color: white;
+        }
+
+        #enviar {
+            font-size: 1.2em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="logo">Ejercicios JavaScript PFAE ATWeb</p>
+    </header>
+
+    <section class="widget">
+        <h4 class="widgettitulo">Listado de Títulos</h4>
+        <hr/><br/>
+        <form id="miform">
+            <label>Género : <input type="text" id="genero" name="genero"></label>
+            <button type="button" id="enviar">Enviar</button>
+        </form>
+        <hr/><br/>
+        <div class="datagrid" id="datagrid"></div>
+        <div class="datagridII" id="datagridII"></div>
+    </section>
+
+
+
+    <script src="jquery112.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

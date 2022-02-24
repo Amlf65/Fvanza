@@ -1,0 +1,19 @@
+#botones {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+#capa {
+    margin: 10px auto;
+    width: 400px;
+    color: white;
+    font-size: 1.2em;
+}

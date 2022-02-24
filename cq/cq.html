@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <script src='https://code.jquery.com/jquery-3.5.1.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
+        <title>Diapositiva 25</title>
+        <style>
+            @font-face { font-family: myFont; src: url(cq/Cheveuxdange.ttf); font-weight: bolder;}
+            body{ color:white; background-color: #333;font:2em myFont;}
+            *{ box-sizing: border-box; margin:0; padding: 0;}
+            header,div{font-family: myFont; text-align: center;padding:.2em;width:95%;margin:.5em auto; color:white; border:3px solid white}
+            p{color:white;float:right;font-size:.8em;margin-right: 1em;}
+            hr{border:3px dashed yellow;margin-top: 0.5em;}
+            input,button{font: 1.2em myFont;background-color: lightskyblue;}
+        </style>
+        <script>
+            $(document).ready(function(){
+                $('#consulta').click(function() {
+                    $('#datagrid').load('consulta.php');
+                })
+                $('#consulta1').click(function() {
+                    $('#datagrid1').load('consulta1.php');
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <header style='grid-column: span 2;'>Ajax – consultas sql</header>
+        <div style='text-align:left;color:yellow;padding-left:1.5em;line-height:1.5em'>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function Cargar() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#datagrid').load('consulta.php');<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function Cargar1() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#datagrid').load('consulta1.php')<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br><br><br>
+        </div>
+        <hr>
+         <div style='display:grid;grid-template-columns: 1fr 1fr;border:none;'>
+            <button id='consulta' >Consulta</button>
+             <button id='consulta1'>Consulta1</button>
+             <div id='datagrid' style='color:lightskyblue;border:none;'></div>
+             <div id='datagrid1' style='color:lightskyblue;border:none;' ></div>
+        </div>
+    </body>
+</html>
